@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Card.module.css";
-import userImg from "../assets/ujjwal-removebg-preview.png";
+import userImg from "./ujjwal-removebg-preview.png";
 import { FaHeart, FaUser, FaIdCard, FaMapMarkerAlt, FaCalendarAlt, FaTint, FaSignature, FaQrcode } from "react-icons/fa";
 
 const Card = () => {
@@ -119,3 +119,4 @@ const Card = () => {
 
 
 export default Card;
+
