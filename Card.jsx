@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Card.module.css";
+import userImg from "../assets/ujjwal-removebg-preview.png";
 import { FaHeart, FaUser, FaIdCard, FaMapMarkerAlt, FaCalendarAlt, FaTint, FaSignature, FaQrcode } from "react-icons/fa";
 
 const Card = () => {
@@ -25,10 +26,10 @@ const Card = () => {
             <div className={styles.leftSection}>
               <div className={styles.photoFrame}>
                 <img
-                  src="./ujjwal-removebg-preview.png"
-                  alt="User"
-                  className={styles.userImage}
-                />
+  src={userImg}
+  alt="User"
+  className={styles.userImage}
+/>
               </div>
               <h2 className={styles.userName}>Ujjwal Deshmusk</h2>
               <div className={styles.userIdContainer}>
@@ -115,5 +116,6 @@ const Card = () => {
     </div>
   );
 };
+
 
 export default Card;
