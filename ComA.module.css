@@ -1,0 +1,123 @@
+/* ComA.module.css */
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: url("https://static.vecteezy.com/system/resources/previews/015/286/180/non_2x/abstract-doctor-medical-line-medical-treatment-illustration-concept-and-icon-modern-on-health-background-health-insurance-vector.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents overflow from background effects */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* Slightly darker overlay for better contrast */
+  backdrop-filter: blur(5px); /* Adds a subtle blur to the background image */
+}
+
+.card {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 400px;
+  padding: 2.5rem; /* Increased padding */
+  border-radius: 20px; /* More rounded corners */
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+  backdrop-filter: blur(20px); /* Increased blur for a stronger glass effect */
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* A subtle border */
+  color: #fff;
+  animation: fadeIn 1s ease-out; /* Fade-in animation for the card */
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem; /* Larger title */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+.subtitle {
+  text-align: center;
+  color: #cdd4e0; /* A slightly more vibrant subtitle color */
+  margin-bottom: 2rem; /* Increased margin */
+}
+
+.input {
+  width: 100%;
+  padding: 0.8rem 1rem; /* Increased padding for a taller input field */
+  margin-bottom: 1.2rem; /* Increased margin */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px; /* More rounded input fields */
+  background: rgba(255, 255, 255, 0.1); /* Slightly more transparent input */
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #6366f1; /* Highlight with the primary color on focus */
+}
+
+.input::placeholder {
+  color: #cdd4e0;
+}
+
+.button {
+  width: 100%;
+  padding: 0.9rem; /* Increased padding */
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #9333ea
+  ); /* A vibrant gradient */
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.button:hover {
+  transform: translateY(-3px); /* Lifts the button on hover */
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+}
+
+.signupText {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #e0e0e0;
+}
+
+.signupLink {
+  font-weight: bold;
+  cursor: pointer;
+  color: #6366f1;
+  transition: color 0.3s ease;
+  text-decoration: underline; /* Add underline for better affordance */
+}
+
+.signupLink:hover {
+  color: #9333ea; /* Change color on hover to match the gradient */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

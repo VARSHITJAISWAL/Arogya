@@ -1,0 +1,66 @@
+/* App.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 25px; /* Increased gap for better spacing */
+  background: linear-gradient(135deg, #56ece5, #9cebe4); 
+  animation: gradientAnimation 10s ease infinite, fadeOut 0.5s ease-out 2.5s forwards;/* A gentle, cool-toned gradient */
+  padding: 20px;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for depth */
+}
+
+.btn {
+  width: 300px;
+  min-height: 120px; /* Use min-height for better responsiveness */
+  padding: 25px 20px; /* Increased vertical padding */
+  font-size: 24px; /* Slightly larger font size */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A more modern font */
+  font-weight: 600; /* Bolder text */
+  cursor: pointer;
+  border: none;
+  border-radius: 15px; /* More rounded corners */
+  color: #ffffff;
+  background-color: #00796b; /* A darker, more professional green */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow for a "lifted" effect */
+  transition: all 0.3s ease; /* Transition for all properties */
+  position: relative;
+  overflow: hidden; /* Hides the hover effect overflow */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background-color: #004d40; /* Darker green on hover */
+  transform: translateY(-5px); /* Lift the button on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+/* Optional: Add a subtle ripple effect on click */
+.btn:active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  animation: ripple 0.5s ease-out;
+}
+
+@keyframes ripple {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(100);
+    opacity: 0;
+  }
+}
